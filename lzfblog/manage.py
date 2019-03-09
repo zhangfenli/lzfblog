@@ -3,7 +3,7 @@ import os
 import sys
 
 if __name__ == '__main__':
-    profile = os.environ.get('TYPE_PROFILE', 'develop')
+    profile = os.environ['TYPE_PROFILE']
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'lzfblog.settings.%s' % profile)
     try:
         from django.core.management import execute_from_command_line
